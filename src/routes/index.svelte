@@ -2,11 +2,11 @@
 
 {#if $sound}
 	<AudioAnalyzer/>
+	<Frequency/>
 {/if}
-
-<h1>VJ</h1>
 
 <script>
 	import SoundControl, { sound } from '$lib/SoundControl.svelte'
 	import AudioAnalyzer from '$lib/AudioAnalyzer.svelte'
+	import Frequency from '$lib/Frequency.svelte'
 </script>
