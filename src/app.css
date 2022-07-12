@@ -8,3 +8,9 @@
 		color: #fff;
 	}
 }
+
+@layer utilities {
+	.off {
+		opacity: 0.5;
+	}
+}

@@ -1,4 +1,9 @@
-<SoundControl/>
+<MIDISwitch/>
+<SoundSwitch/>
+
+{#if $midi}
+	<MIDIControls/>
+{/if}
 
 {#if $sound}
 	<AudioAnalyzer/>
@@ -6,7 +11,10 @@
 {/if}
 
 <script>
-	import SoundControl, { sound } from '$lib/SoundControl.svelte'
+	import MIDISwitch, { midi } from '$lib/MIDISwitch.svelte'
+	import SoundSwitch, { sound } from '$lib/SoundSwitch.svelte'
+
+	import MIDIControls from '$lib/MIDIControls.svelte'
 	import AudioAnalyzer from '$lib/AudioAnalyzer.svelte'
 	import Frequency from '$lib/Frequency.svelte'
 </script>

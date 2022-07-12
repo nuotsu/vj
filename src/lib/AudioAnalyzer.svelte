@@ -1,13 +1,13 @@
-{#await getMedia({ audio: true }) then stream}
+{#await getMedia() then stream}
 	<audio use:srcObject={stream} autoplay crossorigin="anonymous" />
 {:catch}
 	🙅‍♂️
 {/await}
 
 <script>
-	async function getMedia(constraints) {
+	async function getMedia() {
 		if ('navigator' in window) {
-			return navigator.mediaDevices.getUserMedia(constraints)
+			return navigator.mediaDevices.getUserMedia({ audio: true })
 		}
 	}
 

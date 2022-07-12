@@ -2,12 +2,6 @@
 	🎧
 </button>
 
-<style>
-	.off {
-		opacity: 0.5;
-	}
-</style>
-
 <script context="module">
 	import { writable } from 'svelte/store'
 
