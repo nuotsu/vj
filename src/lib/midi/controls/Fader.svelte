@@ -1,5 +1,5 @@
 <label>
-	<slot>{key}</slot>
+	<slot></slot>
 
 	<input type="range"
 		bind:value min={0} max={127}

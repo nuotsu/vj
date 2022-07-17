@@ -1,8 +1,8 @@
 <nav>
 	<fieldset>
-		<Bang key={67} on:click={() => console.log('🫲')}>🫲</Bang>
+		<Bang key={67} on:click={() => console.log('⬅️')}>⬅️</Bang>
 		<Knob key={10} />
-		<Bang key={64} on:click={() => console.log('🫱')}>🫱</Bang>
+		<Bang key={64} on:click={() => console.log('➡️')}>➡️</Bang>
 
 		<Fader key={9} />
 

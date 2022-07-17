@@ -1,9 +1,11 @@
 <label>
-	<slot>{key}</slot>
+	<slot></slot>
 
-	<input type="range"
+	<input type="hidden"
 		bind:value min={0} max={127}
 	/>
+
+	<meter {value} min={0} max={127} />
 </label>
 
 <script>
