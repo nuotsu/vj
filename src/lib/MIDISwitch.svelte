@@ -2,6 +2,12 @@
 	🎛
 </button>
 
+{#if $midi}
+	<a href="https://addons.mozilla.org/firefox/downloads/file/3975194/fa003cbe5f5d4168b33f-1.0.xpi">
+		Download Firefox Addon
+	</a>
+{/if}
+
 <script context="module">
 	import { writable } from 'svelte/store'
 
