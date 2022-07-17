@@ -1,3 +1,5 @@
+<svelte:window on:keydown={onKeydown} />
+
 <button class:off={!$midi} on:click={() => $midi = !$midi}>
 	🎛
 </button>
@@ -12,4 +14,10 @@
 	import { writable } from 'svelte/store'
 
 	export const midi = writable(false)
+
+	function onKeydown({ key }) {
+		if (key === '`') {
+			midi.update(v => !v)
+		}
+	}
 </script>
