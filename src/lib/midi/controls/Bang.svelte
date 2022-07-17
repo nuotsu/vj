@@ -14,13 +14,13 @@
 </style>
 
 <script>
-	import { msgKey, msgValue } from '../MIDIControls.svelte'
+	import { messageKey, messageValue } from '../MIDIControls.svelte'
 
 	export let key
 
 	let bang, active
 
-	$: if (key == $msgKey && $msgValue == 127) {
+	$: if (key == $messageKey && $messageValue == 127) {
 		active = true
 		bang.click()
 	} else {
