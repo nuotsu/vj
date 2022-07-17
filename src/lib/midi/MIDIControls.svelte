@@ -46,9 +46,9 @@
 
 	export let input
 
-	input.onmidimessage = e => {
-		let [_, key, value] = e.data
-		console.log(e)
+	input.onmidimessage = ({ data }) => {
+		let [_, key, value] = data
+		console.log(key, value)
 		$messageKey = key
 		$messageValue = value
 	}
