@@ -2,7 +2,9 @@
 <SoundSwitch/>
 
 {#if $midi}
-	<MIDIControls/>
+	{#await requestMIDI() then input}
+		<MIDIControls {input} />
+	{/await}
 {/if}
 
 {#if $sound}
@@ -11,10 +13,10 @@
 {/if}
 
 <script>
-	import MIDISwitch, { midi } from '$lib/MIDISwitch.svelte'
+	import MIDISwitch, { midi } from '$lib/midi/MIDISwitch.svelte'
 	import SoundSwitch, { sound } from '$lib/SoundSwitch.svelte'
 
-	import MIDIControls from '$lib/MIDIControls.svelte'
+	import MIDIControls, { requestMIDI } from '$lib/midi/MIDIControls.svelte'
 	import AudioAnalyzer from '$lib/AudioAnalyzer.svelte'
 	import Frequency from '$lib/Frequency.svelte'
 </script>
