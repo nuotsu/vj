@@ -7,22 +7,14 @@
 		</div>
 
 		<Fader key={9} />
-
-		<Bang key={1} on:click={() => console.log('1️⃣')}>1️⃣</Bang>
-		<Bang key={2} on:click={() => console.log('2️⃣')}>2️⃣</Bang>
 	</fieldset>
 
-	{#each Object.entries(faders) as [legend, [knob, fader, toggle]]}
-		<fieldset class="flex items-center gap-2">
-			<legend>{legend}</legend>
-
-			<Knob key={knob} />
-			<Fader key={fader} />
-			<Toggle key={toggle} />
-		</fieldset>
-	{/each}
+	<Faders/>
 
 	<fieldset>
+		<Bang key={1} on:click={() => console.log('1️⃣')}>1️⃣</Bang>
+		<Bang key={2} on:click={() => console.log('2️⃣')}>2️⃣</Bang>
+
 		<Bang key={49} on:click={() => console.log('🔄')}>🔄</Bang>
 		<Bang key={47} on:click={() => console.log('⏪')}>⏪</Bang>
 		<Bang key={48} on:click={() => console.log('⏩')}>⏩</Bang>
@@ -39,13 +31,12 @@
 </style>
 
 <script>
-	import Knob from './controls/Knob.svelte'
-	import Fader from './controls/Fader.svelte'
-	import Bang from './controls/Bang.svelte'
-	import Toggle from './controls/Toggle.svelte'
+	import Knob from './inputs/Knob.svelte'
+	import Fader from './inputs/Fader.svelte'
+	import Bang from './inputs/Bang.svelte'
 
-	import faders from './controls/faders'
 	import { sound } from '$lib/SoundSwitch.svelte'
+	import Faders from './controls/Faders.svelte'
 
 	export let input
 
