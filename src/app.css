@@ -4,6 +4,7 @@
 
 @layer base {
 	body {
+		accent-color: green;
 		background-color: #000;
 		color: #fff;
 	}

@@ -1,8 +1,10 @@
 <nav>
 	<fieldset>
-		<Bang key={67} on:click={() => console.log('⬅️')}>⬅️</Bang>
-		<Knob key={10} />
-		<Bang key={64} on:click={() => console.log('➡️')}>➡️</Bang>
+		<div class="flex items-center gap-2">
+			<Bang key={67} on:click={() => console.log('⬅️')}>⬅️</Bang>
+			<Knob key={10} />
+			<Bang key={64} on:click={() => console.log('➡️')}>➡️</Bang>
+		</div>
 
 		<Fader key={9} />
 
@@ -11,8 +13,9 @@
 	</fieldset>
 
 	{#each Object.entries(faders) as [legend, [knob, fader, toggle]]}
-		<fieldset>
+		<fieldset class="flex items-center gap-2">
 			<legend>{legend}</legend>
+
 			<Knob key={knob} />
 			<Fader key={fader} />
 			<Toggle key={toggle} />
