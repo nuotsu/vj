@@ -1,11 +1,11 @@
 <fieldset
-	class="flex items-center gap-2"
+	class="flex flex-col items-center gap-2"
 	style:border-color={$t ? 'green' : 'currentColor'}
 >
 	<legend>{legend}</legend>
 
 	<Knob key={k_key} />
-	<Fader key={f_key} />
+	<Fader vertical key={f_key} />
 	<Toggle key={t_key} checked={t} />
 </fieldset>
 

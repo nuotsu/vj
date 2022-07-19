@@ -20,4 +20,8 @@
 	.off {
 		opacity: 0.5;
 	}
+
+	.dynamic-color {
+		color: hsla(120, 100%, calc(100% - var(--v, 0) * 50%));
+	}
 }
