@@ -32,7 +32,7 @@
 
 	.vertical {
 		writing-mode: vertical-lr;
-		max-inline-size: 150px;
+		max-inline-size: 100px;
 	}
 </style>
 

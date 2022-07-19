@@ -9,7 +9,10 @@
 		<Fader key={9} />
 	</section>
 
-	<section class="faders" style:grid-template-columns="repeat({Object.entries(faders).length}, 1fr)">
+	<section
+		class="faders"
+		style:grid-template-columns="repeat({Object.entries(faders).length}, 1fr)"
+	>
 		{#each Object.entries(faders) as [legend, values]}
 			<FaderSet {legend} {...values} />
 		{/each}
@@ -38,11 +41,15 @@
 			'main faders'
 			'bottom bottom';
 		grid-template-columns: auto 1fr;
+		align-items: center;
+		gap: 1ch;
+		padding: 1ch;
 	}
 
 	.faders {
 		grid-area: faders;
 		display: grid;
+		gap: 1ch;
 	}
 
 	.bottom {

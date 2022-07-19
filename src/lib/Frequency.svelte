@@ -1,6 +1,8 @@
 <div>
-	{#each data as d}
-	<output>{d}</output>
+	{#each data as value}
+		<output class="dynamic-color" style:--v={value / 255}>
+			{value}
+		</output>
 	{/each}
 </div>
 
