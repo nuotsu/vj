@@ -8,11 +8,18 @@
 		background-color: #000;
 		color: #fff;
 	}
+
+	summary {
+		display: block;
+		cursor: pointer;
+	}
+	:-webkit-details-marker { display: none; }
 }
 
 @layer components {
 	.link {
-		text-decoration: underline;
+		text-decoration: 0.5px dashed underline;
+		@apply hover:decoration-solid;
 	}
 }
 
@@ -23,5 +30,10 @@
 
 	.dynamic-color {
 		color: hsla(120, 100%, calc(100% - var(--v, 0) * 50%));
+	}
+
+	.glass {
+		backdrop-filter: blur(2px);
+		@apply bg-black/80;
 	}
 }

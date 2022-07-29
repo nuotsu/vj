@@ -24,7 +24,7 @@
 			<Bang key={2} on:click={() => console.log('2️⃣')}>2️⃣</Bang>
 		</fieldset>
 		<fieldset>
-			<Bang key={49} on:click={() => console.log('🔄')}>🔄</Bang>
+			<Bang key={49} on:click={() => $board = !$board}>🔄</Bang>
 			<Bang key={47} on:click={() => console.log('⏪')}>⏪</Bang>
 			<Bang key={48} on:click={() => console.log('⏩')}>⏩</Bang>
 			<Bang key={46} on:click={() => $sound = false}>⏹</Bang>
@@ -66,6 +66,7 @@
 	import Fader from './inputs/Fader.svelte'
 	import Bang from './inputs/Bang.svelte'
 
+	import { board } from '$lib/midi/MIDIBoard.svelte'
 	import { sound } from '$lib/SoundSwitch.svelte'
 	import faders from './controls/faders'
 	import FaderSet from './controls/FaderSet.svelte'
@@ -74,7 +75,6 @@
 
 	input.onmidimessage = ({ data }) => {
 		let [_, key, value] = data
-		console.log(key, value)
 		$messageKey = key
 		$messageValue = value
 	}

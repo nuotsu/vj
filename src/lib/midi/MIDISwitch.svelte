@@ -1,13 +1,15 @@
 <svelte:window on:keydown={onKeydown} />
 
 <button class:off={!$midi} on:click={() => $midi = !$midi}>
-	🎛
+	🔌
 </button>
 
 {#if $midi}
-	<a class="link" href="https://addons.mozilla.org/firefox/downloads/file/3975194/fa003cbe5f5d4168b33f-1.0.xpi">
-		Download Firefox Addon
-	</a>
+	<small>
+		<a class="link" href="https://addons.mozilla.org/firefox/downloads/file/3975194/fa003cbe5f5d4168b33f-1.0.xpi">
+			Download Firefox Addon
+		</a>
+	</small>
 {/if}
 
 <script context="module">
